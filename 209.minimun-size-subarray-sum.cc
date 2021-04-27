@@ -20,3 +20,10 @@ public:
 		return minLen == INT32_MAX ? 0 : minLen;
 	}
 };
+
+// 滑动窗口法
+while (sum >= s) {
+	subLength = j - i + 1;
+	result = result < subLength ? result : subLength;
+	sum -= nums[i++];
+}
