@@ -17,6 +17,6 @@ public:
 				}
 			}
 		}
+		return minLen == INT32_MAX ? 0 : minLen;
 	}
-
 };
