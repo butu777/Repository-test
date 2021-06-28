@@ -1,11 +1,14 @@
 // 寻找循环链表
 方法一：哈希表
 ListNode *detectCycle(ListNode *head) {
+    // unordered_set以hashtable组织元素
     unordered_set<ListNode *> visited;
     while (head != nullptr) {
+        // 寻找是否有相同元素，若有则是循环链表入口
         if (visited.count(head)) {
             return head;
         }
+        // insert返回a pair consisting of an iterator to the element and a bool
         visited.insert(head);
         head = head->next;
     }

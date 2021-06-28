@@ -8,6 +8,7 @@ class Solution {
 public:
     ListNode* removeElements(ListNode* head, int val) {
         // 删除头节点
+        // 如果头节点要删除，删除后需要判断新的头节点是否==val, 所有使用循环
         while (head != NULL & head->val == val) {
             ListNode* tmp = head;
             head = head->next;
